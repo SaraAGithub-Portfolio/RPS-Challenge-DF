@@ -4,8 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha",
+    "coverage": "istanbul cover _mocha",
+    "start": "nodemon index.js"
   },
-  "author": "dearshrewdwit",
-  "license": "ISC"
+  "author": "Sara A",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0",
+    "nodemon": "^3.0.1",
+    "nyc": "^15.1.0"
+  }
 }

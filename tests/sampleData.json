@@ -1,0 +1,19 @@
+[
+    {
+        "players": {
+            "id": 1,
+            "name": "Alice",
+            "isComputer": false
+        }
+    },
+    {
+        "id": 2,
+        "name": "Bob",
+        "isComputer": false
+    },
+    {
+        "id": 3,
+        "name": "Computer",
+        "isComputer": true
+    }
+]

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <h1>Current Players: <%= name %>!</h1>
+    <h1> Your choice is <%= option %>!</h1>
+
+    <form action="/turn" method="post">
+        <select name="option">
+            <option value="rock">Rock</option>
+            <option value="paper">Paper</option>
+            <option value="scissors">Scissors</option>
+        </select>
+        <input type="submit" value="Play">
+    </form>
+</body>
+
+</html>

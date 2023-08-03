@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors Challenge</title>
+</head>
+
+<body>
+    <h1> Let's Play Rock Paper Scissors!</h1>
+    <p>What are your names?</p>
+    <form action="/game" method="post">
+        <p>Player 1: <input id="player1-name-textbox" type="text" name="player1"></p>
+        <p>Player 2:
+            <input id="player2-name-textbox" type="text" name="player2">
+            <select id="player2-type-select" name="playerType">
+                <option value="Human">Human</option>
+                <option value="Computer">Computer</option>
+            </select>
+        </p>
+
+        <input id="names-submit" type="submit" value="Submit">
+    </form>
+</body>
+
+</html>
