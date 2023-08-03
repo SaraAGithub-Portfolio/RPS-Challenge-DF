@@ -1,6 +1,6 @@
-const express = require('express');
+import express from 'express';
 const router = express.Router();
-const GameLogic = require('../src/GameLogic.js');
+import GameLogic from '../src/GameLogic.js';
 
 
 router.post('/', (req, res) => {
@@ -28,4 +28,4 @@ router.get('/', (req, res) => {
         option: player.option
     });
 })
-module.exports = router;
+export default router;

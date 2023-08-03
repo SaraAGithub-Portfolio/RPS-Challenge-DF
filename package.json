@@ -2,11 +2,12 @@
   "name": "rock-paper-scissors-challenge",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
+  "type": "module",
   "scripts": {
-    "test": "mocha",
-    "coverage": "istanbul cover _mocha",
-    "start": "nodemon index.js"
+    "start": "nodemon app",
+    "test": "mocha test/**/*.test.js",
+    "coverage": "istanbul cover _mocha"
   },
   "author": "Sara A",
   "license": "ISC",
@@ -16,6 +17,7 @@
   },
   "devDependencies": {
     "chai": "^4.3.7",
+    "chai-http": "^4.4.0",
     "mocha": "^10.2.0",
     "nodemon": "^3.0.1",
     "nyc": "^15.1.0"

@@ -13,4 +13,4 @@ class ScoreTracker {
         return this.scores;
     }
 }
-module.exports = ScoreTracker;
+export default ScoreTracker;

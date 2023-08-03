@@ -1,5 +1,5 @@
-const Player = require('./Player');
-const ScoreTracker = require('./ScoreTracker');
+import Player from './Player.js'; //need to decouple
+import ScoreTracker from './ScoreTracker.js';
 
 class GameLogic {
     setup(players, playerClass = Player) {
@@ -11,9 +11,6 @@ class GameLogic {
     }
     otherPlayer() {
         return this.players[1];
-    }
-    switch() {
-        this.players.reverse();
     }
     playRound() {
         const outcome = this.roundOutcome(this.currentPlayer().option, this.otherPlayer().option);
@@ -38,4 +35,4 @@ class GameLogic {
 
     }
 }
-module.exports = GameLogic;
+export default GameLogic;

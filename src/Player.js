@@ -1,4 +1,4 @@
-class Player {
+class Player { //need encapsulation 
     constructor(name, isComputer = false) {
         this.name = name;
         this.isComputer = isComputer;
@@ -7,4 +7,4 @@ class Player {
         this.option = this.isComputer ? ['rock', 'paper', 'scissors'][Math.floor(Math.random() * 3)] : option;
     }
 }
-module.exports = Player;
+export default Player;

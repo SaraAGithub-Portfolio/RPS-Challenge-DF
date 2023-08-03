@@ -1,4 +1,4 @@
-const express = require('express');
+import express from 'express';
 const router = express.Router();
 
 router.post('/', (req, res) => {
@@ -10,4 +10,4 @@ router.post('/', (req, res) => {
 
     res.render('results', { message });
 })
-module.exports = router;
+export default router;

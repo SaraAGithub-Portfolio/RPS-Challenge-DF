@@ -1,9 +1,15 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const GameLogic = require('.src/GameLogic.js');
+import express from 'express';
+import bodyParser from 'body-parser';
+import GameLogic from './src/GameLogic.js';
+import indexRouter from './routes/index.js';
+import gameRouter from './routes/game.js';
+import turnRouter from './routes/turn.js';
+import winnerRouter from './routes/winner.js';
+
 const app = express();
 const port = 3000;
 
+app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');
 
@@ -16,12 +22,6 @@ app.get('/', (req, res) => {
     res.render('index');
 });
 
-
-const indexRouter = require('./routes/index.js')
-const gameRouter = require('./routes/game.js')
-const turnRouter = require('./routes/turn.js')
-const winnerRouter = require('./routes/winner.js')
-
 app.use('/', indexRouter);
 app.use('/game', gameRouter);
 app.use('/turn', turnRouter);
@@ -30,4 +30,4 @@ app.use('/results', winnerRouter);
 app.listen(port, () => {
     console.log(`Listening at http://localhost:${port}`)
 });
-module.exports = app;
+export default app;
