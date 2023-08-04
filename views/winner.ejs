@@ -7,10 +7,15 @@
 </head>
 
 <body>
-    <h1>Winner!</h1>
-    <p>
-        <%= message %>
+    <h1>Winner: <%= winnerPlayer.name %>
+    </h1>
+    <h1>Loser: <%= loserPlayer.name %>
+    </h1>
+    <p>Winner's Score: <%= results.winnerPlayer %>
     </p>
+    <p>Loser's Score: <%= results.loserPlayer %>
+    </p>
+    <a href="/game">Play Again</a>
 </body>
 
 </html>

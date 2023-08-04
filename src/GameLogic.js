@@ -1,16 +1,15 @@
-import Player from './Player.js'; //need to decouple
-import ScoreTracker from './ScoreTracker.js';
-
 class GameLogic {
-    setup(players, playerClass = Player) {
-        this.players = players.map(player => new playerClass(player.name, player.isComputer));
-        this.scoreTracker = new ScoreTracker(this.players[0], this.players[1]);
+    setup(players) {
+        this.players = players;
     }
     currentPlayer() {
         return this.players[0];
     }
     otherPlayer() {
         return this.players[1];
+    }
+    switch() {
+        [this.players[0], this.players[1]] = [this.players[1], this.players[0]];
     }
     playRound() {
         const outcome = this.roundOutcome(this.currentPlayer().option, this.otherPlayer().option);
@@ -23,7 +22,7 @@ class GameLogic {
         const message = outcome === 'tie' ? 'It\'s a tie!' : `${winner.name} wins this round!`;
         console.log(message);
 
-        if (outcome !== 'tie') this.scoreTracker.addScore(winner);
+        if (outcome !== 'tie') winner.incrementScore();
         return message;
     }
 
