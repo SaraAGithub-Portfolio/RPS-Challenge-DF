@@ -1,10 +1,15 @@
-class CompPlayer {
+class Players {
+
+    constructor(name) {
+        this.name = name;
+    }
+
     options = ['rock', 'paper', 'scissors'];
 
-    chooseOption() {
+    compOption() {
         return this.options[Math.floor(Math.random() * this.options.length)];
     }
 }
 
-export default CompPlayer;
+export default Players;
 
