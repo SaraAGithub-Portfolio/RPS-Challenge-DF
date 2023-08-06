@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <h1>Winner ...</h1>
+    <h2>Player<%= playerName %>, You chose <%= playerChoice %>
+    </h2>
+    <h2>Computer chose <%= computerChoice %>
+    </h2>
+    <h2>
+        <%= result %>
+    </h2>
+    <form action="/game" method="post">
+        <input type="submit" value="Play again" id="play-again" />
+    </form>
+    <br />
+    <form action="/" method="get">
+        <input type="submit" value="End game" id="end-game" />
+    </form>
+</body>
+
+</html>

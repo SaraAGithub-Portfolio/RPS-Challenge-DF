@@ -1,18 +1,37 @@
-import chai, { expect } from 'chai';
-import chaiHttp from 'chai-http';
+import { expect } from 'chai';
 import GameLogic from '../src/GameLogic.js';
-import Player from '../src/player.js';
-
-chai.use(chaiHttp);
+import Player from '../src/CompPlayer.js';
 
 describe('GameLogic class tests', () => {
-    const gameLogic = new GameLogic();
+    let playerChoice;
+    let computerChoice;
+    let gameLogic;
 
-    it('should return the correct round outcome', async () => {
-        const players = [new Player('Player1', new Player('Player2'))];
-        gameLogic.setup(players);
-        expect(gameLogic.roundOutcome('rock', 'rock')).to.equal('tie');
-        expect(gameLogic.roundOutcome('rock', 'scissors')).to.equal('player1');
-        expect(gameLogic.roundOutcome('scissors', 'rock')).to.equal; ('player2');
+    beforeEach(() => {
+        playerChoice = new Player('Player');
+        computerChoice = new Player('Computer');
+        gameLogic = new GameLogic(playerChoice, computerChoice);
     });
+
+    it('should return tie when both choices are the same', () => {
+        let playerChoiceIndex = gameLogic.option.indexOf('rock');
+        let computerChoiceIndex = gameLogic.option.indexOf('rock');
+        expect(gameLogic.determineOutcome(playerChoiceIndex, computerChoiceIndex)).to.equal('tie');
+    });
+
+    it('should return player name when player wins', () => {
+        let playerChoiceIndex = gameLogic.option.indexOf('rock');
+        let computerChoiceIndex = gameLogic.option.indexOf('scissors');
+        expect(gameLogic.determineOutcome(playerChoiceIndex, computerChoiceIndex)).to.equal('Player won!');
+    });
+
+    it('should return computer name when computer wins', () => {
+        let playerChoiceIndex = gameLogic.option.indexOf('rock');
+        let computerChoiceIndex = gameLogic.option.indexOf('paper');
+        expect(gameLogic.determineOutcome(playerChoiceIndex, computerChoiceIndex)).to.equal('Computer won!');
+    });
+
 });
+
+
+

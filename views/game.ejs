@@ -7,15 +7,11 @@
 </head>
 
 <body>
-    <h1> Other player's choice is <%= option %>!</h1>
-
-    <form action="/turn" method="post">
-        <select name="option">
-            <option value="rock">Rock</option>
-            <option value="paper">Paper</option>
-            <option value="scissors">Scissors</option>
-        </select>
-        <input type="submit" value="Play">
+    <h1> Choose your move !</h1>
+    <form action="/result" method="post">
+        <input name="playerChoice" id="rock" type="submit" value="rock" />
+        <input name="playerChoice" id="paper" type="submit" value="paper" />
+        <input name="playerChoice" id="scissors" type="submit" value="scissors" />
     </form>
 </body>
 

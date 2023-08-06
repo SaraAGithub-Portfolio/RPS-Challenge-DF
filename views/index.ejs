@@ -9,15 +9,10 @@
 
 <body>
     <h1> Let's Play Rock Paper Scissors!</h1>
-    <p>What are your names?</p>
     <form action="/game" method="post">
-        <label for="player1">Player 1:</label>
-        <input type="text" name="player1" id="player1" required>
-        <br>
-        <label for="player2">Player 2:</label>
-        <input type="text" name="player2" id="player2">
-        <input type="checkbox" name="vsComputer" id="vsComputer">
-        <label for="vsComputer">Play against the computer</label>
+        <p>Enter your name: </p>
+        <p>Player : <input id="player-name-textbox" type="text" name="player" placeholder="Enter your name" required>
+        </p>
         <br>
         <input type="submit" value="Start Game">
     </form>
