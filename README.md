@@ -1,24 +1,13 @@
 # RPS Challenge
 
-Instructions
+About
 -------
+This is a simple rock, paper, scissors project that uses Javascript, Node, Express and Mocha & Chai for testing.
+A player should be able to enter his or her name, click the start button, be directed to a choice of : rock, paper and scissors, choose an option and then their choice and the computer's choice will be displayed along with who won. Player can choose to play again or end the game, which will redirect them to the main page.
 
-* Feel free to use google, your notes, books, etc. but work on your own
-* If you refer to the solution of another coach or trainee, please put a link to that in your README
-* If you have a partial solution, **still check in a partial solution**
-* You must submit a pull request to this repo with your code by the deadline specified in Noodle
-
-Task
+Approach
 ----
-
-The DFA team ( **DFAT** ) have asked you to provide a game for them. The daily grind is pretty tough and they need time to have a little fun.
-
-As usual please start by
-
-* Forking this repo
-* TEST driving development of your app
-
-Your task is to provide a _Rock, Paper, Scissors_ game for them so they can play on the web with the following user stories:
+Project is set up with folders for routes, src, test and views. Ejs was used to generate HTML. Mocha & Chai were used to test features of the project. I tested that valid data was rendered from the game route, that the game logic was correct and would generate the correct outcome and that the results page would demonstrate the player's choice and that if the there was an issue with the player's choice that an error would occur. 
 
 ### Acceptance Criteria
 ```
@@ -39,24 +28,14 @@ Hints on functionality
 - the game will choose a random option
 - a winner will be declared and an option to play again
 
-## Basic Rules
+## How to Use:
 
-- Rock beats Scissors
-- Scissors beats Paper
-- Paper beats Rock
+```
+To run tests: open an integrated terminal from the 'test' folder. Type: 'npm test'. Should see passing tests.
 
-In code review we'll be hoping to see:
+To view webpage: open an integrated terminal in the root of the directory. Type: 'npm start' this will generate the localhost link. Click on that link. Webpage will open.
+```
 
-* All tests passing
-* High test coverage
-* The code is elegant: every class has a clear responsibility, methods are short etc.
+## Reference:
 
-### Extended Acceptance Criteria
-
-#### Multiplayer
-
-Change the game so that two DFAT members can play against each other ( _yes there are two of them and they'll be playing on the same computer_ ).
-
-#### Rock, Paper, Scissors, Spock, Lizard
-
-Use the _special_ rules ( _you can find them here http://en.wikipedia.org/wiki/Rock-paper-scissors-lizard-Spock_ )
+I used Canva.com for images for this project. This project is for learning purposes only. 

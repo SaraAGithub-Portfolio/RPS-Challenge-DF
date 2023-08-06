@@ -4,15 +4,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background: linear-gradient(to right, #D8BFD8, rgb(200, 162, 200));
+        }
+
+        button.imgChoice {
+            background: none;
+            border: none;
+            padding: 0;
+        }
+
+        img.choice {
+            max-width: 500px;
+            max-height: 500px;
+            cursor: pointer;
+        }
+
+        img.rock-img {
+            max-width: 550px;
+            max-height: 550px;
+        }
+    </style>
 </head>
 
 <body>
-    <h1> Choose your move !</h1>
-    <form action="/result" method="post">
-        <input name="playerChoice" id="rock" type="submit" value="rock" />
-        <input name="playerChoice" id="paper" type="submit" value="paper" />
-        <input name="playerChoice" id="scissors" type="submit" value="scissors" />
-    </form>
+    <div class="text-center">
+        <h1> Choose your move !</h1>
+        <form action="/result" method="post">
+            <button class="imgChoice" name="playerChoice" value="rock">
+                <img src="/images/rock.png" alt="rock" class="choice rock-img">
+            </button>
+            <button class="imgChoice" name="playerChoice" value="paper">
+                <img src="/images/paper.png" alt="paper" class="choice">
+            </button>
+            <button class="imgChoice" name="playerChoice" value="scissors">
+                <img src="/images/scissors.png" alt="scissors" class="choice">
+            </button>
+        </form>
+    </div>
 </body>
 
 </html>

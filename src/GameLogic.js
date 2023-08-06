@@ -6,10 +6,10 @@ class GameLogic {
         if ((playerChoice === "rock" && compChoice === "scissors") ||
             (playerChoice === "scissors" && compChoice === "paper") ||
             (playerChoice === "paper" && compChoice === "rock")) {
-            return "You Win!";
+            return "You Won!";
         }
 
-        return "You Lose!";
+        return "You Lost!";
     }
 }
 

@@ -4,24 +4,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background: linear-gradient(to right, #D8BFD8, rgb(200, 162, 200));
+        }
+
+        input[type="submit"] {
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            background-color: #f0f0f0;
+            transition: background-color 0.3s;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Winner ...</h1>
-    <h2>Player<%= playerName %>, You chose <%= playerChoice %>
-    </h2>
-    <h2>Computer chose <%= computerChoice %>
-    </h2>
-    <h2>
-        <%= result %>
-    </h2>
-    <form action="/game" method="post">
-        <input type="submit" value="Play again" id="play-again" />
-    </form>
-    <br />
-    <form action="/" method="get">
-        <input type="submit" value="End game" id="end-game" />
-    </form>
+    <div class="text-center">
+        <img src="/images/results image.png" alt="Index Image" width="55%">
+        <h2>Player <%= playerName %> chose: <%= playerChoice %>
+        </h2>
+        <h2>Computer chose : <%= computerChoice %>
+        </h2>
+        <h2>
+            <%= result %>
+        </h2>
+        <form action="/game" method="post">
+            <input type="submit" value="Play again" id="play-again" />
+        </form>
+        <form action="/" method="get">
+            <input type="submit" value="End game" id="end-game" />
+        </form>
+    </div>
 </body>
 
 </html>

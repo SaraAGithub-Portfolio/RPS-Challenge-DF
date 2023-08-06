@@ -4,18 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <title>Rock Paper Scissors Challenge</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background: linear-gradient(to right, #D8BFD8, rgb(200, 162, 200));
+        }
+    </style>
 </head>
 
 <body>
-    <h1> Let's Play Rock Paper Scissors!</h1>
-    <form action="/game" method="post">
-        <p>Enter your name: </p>
-        <p>Player : <input id="player-name-textbox" type="text" name="player" placeholder="Enter your name" required>
-        </p>
-        <br>
-        <input type="submit" value="Start Game">
-    </form>
+    <div class="text-center">
+        <h1> Let's Play Rock Paper Scissors!</h1>
+        <img src="/images/Index image.png" alt="Index Image" width="65%">
+        <form action="/game" method="post">
+            <h2>Player: <input id="player-name-textbox" type="text" name="playerName" placeholder="enter your name"
+                    required>
+            </h2>
+            <input type="submit" value="Start Game" class="btn btn-primary btn-lg shadow">
+        </form>
+    </div>
 </body>
 
 </html>

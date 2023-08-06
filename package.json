@@ -7,13 +7,14 @@
   "scripts": {
     "start": "nodemon app",
     "test": "mocha test/**/*.test.js",
-    "coverage": "istanbul cover _mocha"
+    "coverage": "nyc"
   },
   "author": "Sara A",
   "license": "ISC",
   "dependencies": {
     "ejs": "^3.1.9",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "body-parser": "^1.20.2"
   },
   "devDependencies": {
     "chai": "^4.3.7",
