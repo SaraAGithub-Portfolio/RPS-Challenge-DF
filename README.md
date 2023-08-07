@@ -9,6 +9,8 @@ Approach
 ----
 Project is set up with folders for routes, src, test and views. Ejs was used to generate HTML. Mocha & Chai were used to test features of the project. I tested that valid data was rendered from the game route, that the game logic was correct and would generate the correct outcome and that the results page would demonstrate the player's choice and that if the there was an issue with the player's choice that an error would occur. 
 
+Styling used: Bootstrap was used to apply styling and the link for it can be found in the head tag of the ejs files. 
+
 ### Acceptance Criteria
 ```
 As a DFAT member

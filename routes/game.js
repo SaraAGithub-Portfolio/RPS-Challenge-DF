@@ -1,10 +1,8 @@
 import express from 'express';
 const router = express.Router();
-import Players from '../src/Players.js';
 
 router.route('/')
     .post((req, res) => {
-        const playerName = new Players();
         req.app.locals.name = req.body.playerName;
         res.redirect('/game');
     })

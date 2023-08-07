@@ -6,7 +6,7 @@ chai.use(chaiHttp);
 
 describe('Game route tests', () => {
     it('should return status OK when /game is called with valid data', async () => {
-        const testData = { playerOption: 'rock' };
+        const testData = { playerChoice: 'rock' };
         const res = await chai
             .request(app)
             .post('/game')

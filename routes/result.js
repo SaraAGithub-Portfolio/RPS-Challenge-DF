@@ -7,6 +7,7 @@ router.post('/', (req, res) => {
     console.log(req.app.locals.name)
     const gameLogic = new GameLogic();
 
+
     const playerName = req.app.locals.name;
     const playerChoice = req.body.playerChoice;
 
