@@ -1,6 +1,7 @@
 import express from 'express';
 const router = express.Router();
 
+
 router.route('/')
     .post((req, res) => {
         req.app.locals.name = req.body.playerName;

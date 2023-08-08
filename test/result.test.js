@@ -5,16 +5,21 @@ import app from '../app.js';
 chai.use(chaiHttp);
 
 describe('Result route tests', () => {
-    it('should display the player choice on the result page', async () => {
-        let testData = {
-            player: "Leia",
-            playerChoice: "scissors",
-        };
+    it('should return status OK when /result is called with valid data', async () => {
+        let testData = { playerChoice: 'rock', name: 'Han solo' };
         const res = await chai
             .request(app)
             .post('/result')
             .send(testData)
         expect(res).to.have.status(200);
+    });
+    it('should display the player choice on the result page', async () => {
+        let testData = { playerChoice: "rock", };
+        const res = await chai
+            .request(app)
+            .post('/result')
+            .send(testData)
+        expect(res.text).to.include(testData.playerChoice);
     });
 
     it('should display an error message if the user does not make a choice', async () => {
@@ -26,5 +31,7 @@ describe('Result route tests', () => {
             .post('/result')
             .send(errorData);
         expect(res).to.have.status(400);
+        expect(res.body.message).to.equal('You must make a choice');
     });
 });
+

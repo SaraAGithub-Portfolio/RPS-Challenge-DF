@@ -9,7 +9,15 @@ Approach
 ----
 Project is set up with folders for routes, src, test and views. Ejs was used to generate HTML. Mocha & Chai were used to test features of the project. I tested that valid data was rendered from the game route, that the game logic was correct and would generate the correct outcome and that the results page would demonstrate the player's choice and that if the there was an issue with the player's choice that an error would occur. 
 
-Styling used: Bootstrap was used to apply styling and the link for it can be found in the head tag of the ejs files. 
+Styling used: Bootstrap was used to apply styling and the link for it can be found in the head tag of the ejs files. Did some custom styling too, within the ejs files. The "wiggle" of the "Play Again" button is meant to urge the player to play again.
+
+GameLogic Class: Meant to show the simple logic behind the RPS game.
+Players Class: Meant to show the computer's "random" choice(non-human player) and to hold the player's name.
+
+Testing:
+GameLogic.test.js: that the RPS game logic is correct and returns desired outcome
+Result.test.js: tested result route that player's choice and computer's choice is displayed. The options to end game or play again are available.
+Game.test.js: tests that game options are accessed and redirects to game page. 
 
 ### Acceptance Criteria
 ```
@@ -36,6 +44,8 @@ Hints on functionality
 To run tests: open an integrated terminal from the 'test' folder. Type: 'npm test'. Should see passing tests.
 
 To view webpage: open an integrated terminal in the root of the directory. Type: 'npm start' this will generate the localhost link. Click on that link. Webpage will open.
+
+In the result.js route, there is a commented out console.log to check in the console that the user's name is being recorded and persisted throughout the game. This can be uncommented if verification is needed.
 ```
 
 ## Reference:
