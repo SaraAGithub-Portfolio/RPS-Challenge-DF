@@ -1,4 +1,4 @@
-class Players {
+class Player {
 
     constructor(name) {
         this.name = name;
@@ -6,10 +6,10 @@ class Players {
 
     options = ['rock', 'paper', 'scissors'];
 
-    compOption() {
+    randomChoice() {
         return this.options[Math.floor(Math.random() * this.options.length)];
     }
 }
 
-export default Players;
+export default Player;
 

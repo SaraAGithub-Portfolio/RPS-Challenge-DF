@@ -33,5 +33,29 @@ describe('Result route tests', () => {
         expect(res).to.have.status(400);
         expect(res.body.message).to.equal('You must make a choice');
     });
+    it('should display the computer choice on the result page', async () => {
+        let testData = { playerChoice: "rock" };
+        const res = await chai
+            .request(app)
+            .post('/result')
+            .send(testData);
+
+        const validChoices = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
+
+        let computerChoiceFound = validChoices.some(choice => res.text.includes(choice));
+        expect(computerChoiceFound).to.be.true;
+    });
+
+    it('should display the game outcome on the result page', async () => {
+        let testData = { playerChoice: "rock" };
+        const res = await chai
+            .request(app)
+            .post('/result')
+            .send(testData);
+
+        const possibleOutcomes = ["It's a Tie!", "You Won!", "You Lost!"];
+        let outcomeFound = possibleOutcomes.some(outcome => res.text.includes(outcome));
+        expect(outcomeFound).to.be.true;
+    });
 });
 

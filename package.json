@@ -6,21 +6,20 @@
   "type": "module",
   "scripts": {
     "start": "nodemon app",
-    "test": "mocha test/**/*.test.js",
-    "coverage": "nyc"
+    "test": "c8 mocha --timeout 10000 --exit"
   },
   "author": "Sara A",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.20.2",
     "ejs": "^3.1.9",
-    "express": "^4.18.2",
-    "body-parser": "^1.20.2"
+    "express": "^4.18.2"
   },
   "devDependencies": {
+    "c8": "^8.0.1",
     "chai": "^4.3.7",
     "chai-http": "^4.4.0",
     "mocha": "^10.2.0",
-    "nodemon": "^3.0.1",
-    "nyc": "^15.1.0"
+    "nodemon": "^3.0.1"
   }
 }

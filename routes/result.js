@@ -1,7 +1,7 @@
 import express from 'express';
 const router = express.Router();
 import GameLogic from '../src/GameLogic.js';
-import Players from '../src/Players.js';
+import Player from '../src/Player.js';
 
 router.post('/', (req, res) => {
     //console.log(req.app.locals.name) 
@@ -14,8 +14,8 @@ router.post('/', (req, res) => {
         return res.status(400).send({ message: 'You must make a choice' });
     }
 
-    const computerPlayer = new Players();
-    const compPlayerChoice = computerPlayer.compOption();
+    const computerPlayer = new Player();
+    const compPlayerChoice = computerPlayer.randomChoice();
 
     const result = gameLogic.results(playerChoice, compPlayerChoice);
 
