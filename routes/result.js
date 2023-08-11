@@ -14,7 +14,7 @@ router.post('/', (req, res) => {
         return res.status(400).send({ message: 'You must make a choice' });
     }
 
-    const computerPlayer = new Player();
+    const computerPlayer = req.computerPlayer || new Player();
     const compPlayerChoice = computerPlayer.randomChoice();
 
     const result = gameLogic.results(playerChoice, compPlayerChoice);

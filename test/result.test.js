@@ -2,6 +2,12 @@ import chai, { expect } from 'chai';
 import chaiHttp from 'chai-http';
 import app from '../app.js';
 
+class MockPlayer {
+    randomChoice() {
+        return 'rock';
+    }
+}
+
 chai.use(chaiHttp);
 
 describe('Result route tests', () => {
@@ -47,15 +53,15 @@ describe('Result route tests', () => {
     });
 
     it('should display the game outcome on the result page', async () => {
-        let testData = { playerChoice: "rock" };
+        app.request.computerPlayer = new MockPlayer();
+
+        let testData = { playerChoice: "paper" };
         const res = await chai
             .request(app)
             .post('/result')
             .send(testData);
 
-        const possibleOutcomes = ["It's a Tie!", "You Won!", "You Lost!"];
-        let outcomeFound = possibleOutcomes.some(outcome => res.text.includes(outcome));
-        expect(outcomeFound).to.be.true;
+        expect(res.text).to.include("You Won!");
     });
 });
 

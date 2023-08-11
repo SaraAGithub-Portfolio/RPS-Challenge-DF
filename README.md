@@ -29,7 +29,7 @@ Testing
 -------
 GameLogic.test.js: that the RPS game logic is correct and returns desired outcome.
 
-Result.test.js: tested result route that player's choice and computer's choice is displayed.  The options to end game or play again are available. Minor error handling test to ensure the player makes a choice.
+Result.test.js: tested result route that player's choice and computer's choice is displayed.  The options to end game or play again are available. Minor error handling test to ensure the player makes a choice. Needed to add dependency injection in the test to control the behavior of the computer player during testing, making the test deterministic and predictable. Since this project is set and won't undergo further modifications, this approach will suffice--for now.
 
 Game.test.js: tests that game options are accessed and redirects to game page. 
 
