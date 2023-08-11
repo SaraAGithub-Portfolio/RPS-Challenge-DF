@@ -64,7 +64,7 @@ Hints on functionality
 ## How to Use:
 
 ```
-Make sure do run npm install first to ensure you've installed all dependencies indicated in the package.json file.
+Make sure to run npm install first to ensure you've installed all dependencies indicated in the package.json file.
 
 To run tests and code coverage: open an integrated terminal from the 'test' folder. Type: 'npm test'. Should see passing tests and code coverage chart.
 
